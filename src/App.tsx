@@ -24,7 +24,10 @@ function App() {
   }, [])
 
   useEffect(() => {
-    document.title = time.toLocaleTimeString()
+    document.title = time.toLocaleTimeString([], {
+      hour: 'numeric',
+      minute: '2-digit',
+    })
   }, [time])
 
   return (
