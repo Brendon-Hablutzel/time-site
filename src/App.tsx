@@ -23,6 +23,10 @@ function App() {
     }
   }, [])
 
+  useEffect(() => {
+    document.title = time.toLocaleTimeString()
+  }, [time])
+
   return (
     <div className="w-screen overflow-hidden">
       <div className="mt-[10vh] px-5 flex flex-col items-center">
